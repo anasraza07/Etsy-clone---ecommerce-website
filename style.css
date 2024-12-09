@@ -6,7 +6,6 @@
 
 body {
   font-family: "Istok Web", sans-serif;
-  padding-bottom: 100px;
   color: #222222;
 }
 
@@ -14,6 +13,10 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+a {
+  color: #fff;
 }
 
 /* header section */
@@ -323,7 +326,7 @@ img {
 /* subscribe email section */
 #subscribe-email-section {
   background-color: #ccebff;
-  padding: 36px 24px 18px;
+  padding: 36px 24px 30px;
 }
 
 #subscribe-email-section p {
@@ -381,6 +384,7 @@ img {
   cursor: help;
   text-decoration: underline dashed;
   text-underline-position: under;
+  text-align: center;
 }
 
 /* etsy links */
@@ -440,15 +444,19 @@ img {
   flex: 1;
 }
 
-.column{
+.column {
   flex: 1;
 }
 
-#footer-navbar .column h4{
+.column-heading > i {
+  display: none;
+}
+
+#footer-navbar .column h4 {
   margin-bottom: 12px;
 }
 
-#footer-navbar .column a {
+#footer-navbar .column > a {
   display: block;
   width: fit-content;
   color: #fff;
@@ -457,8 +465,68 @@ img {
   font-size: 14px;
 }
 
-#footer-navbar .column a:hover{
+.column #icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 18px;
+}
+
+.column #icons i {
+  font-size: 18px;
+}
+
+#footer-navbar .column a:hover {
   text-decoration: underline;
+}
+
+#footer {
+  background-color: #222222;
+  color: #fff;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+}
+
+#footer-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px 9px 36px;
+  width: 35%;
+}
+
+#footer-info img {
+  width: 18px;
+  filter: invert(100%);
+}
+
+#footer-info span {
+  font-size: 13px;
+  font-weight: 600;
+  padding-top: 1px;
+}
+
+#footer-address-links {
+  font-size: 13px;
+  color: #fff;
+  display: flex;
+  padding: 0 36px 0 0;
+  flex: 1;
+}
+
+#footer-address-links span{
+  text-align: center;
+}
+
+#footer-address-links span:first-child,
+#links a {
+  margin-right: 18px;
+  letter-spacing: .4px;
+}
+
+#links a:last-child {
+  margin-right: 0;
 }
 
 @media (max-width: 1200px) {
@@ -522,6 +590,44 @@ img {
   .content-item {
     text-align: center;
   }
+
+  #etsy-links-section {
+    flex-direction: column-reverse;
+  }
+
+  #download-link-container {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  #logo-container {
+    width: 62px;
+    height: 62px;
+  }
+
+  #logo-container img {
+    width: 48px;
+  }
+
+  #download-link-container button {
+    font-size: 13px;
+    padding: 9px 15px;
+  }
+
+  #footer{
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  #footer-info{
+    padding: 9px 15px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #footer-address-links{
+    padding: 0;
+  }
 }
 
 @media (max-width: 639px) {
@@ -556,5 +662,82 @@ img {
 
   #about-section {
     padding: 54px 30px 72px;
+  }
+
+  #subscribe-email-section {
+    padding: 18px 24px 30px;
+  }
+
+  #powered-by {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #powered-by img {
+    margin-bottom: 6px;
+  }
+
+  #powered-by p {
+    letter-spacing: 0.2px;
+  }
+
+  #footer-navbar {
+    padding: 12px 12px 12px 24px;
+    flex-direction: column;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  #footer-navbar .column .column-heading {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #footer-navbar .column h4 {
+    margin-bottom: 0;
+  }
+
+  #footer-navbar .column .column-heading > i {
+    font-size: 12px;
+    padding: 6px;
+    display: inline-block;
+  }
+
+  #footer-navbar .column > a {
+    display: none;
+  }
+
+  #footer-navbar .column #icons {
+    justify-content: center;
+  }
+
+  #footer-navbar .column #icons i {
+    font-size: 26px;
+  }
+
+  #footer-address-links{
+    flex-direction: column;
+  }
+
+  #footer-address-links span:first-child{
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  #footer-address-links span a{
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 479px) {
+  #footer-navbar {
+    padding: 12px;
+  }
+
+  #powered-by p{
+    margin: 0 12px;
+    
   }
 }
