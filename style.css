@@ -32,8 +32,8 @@ img {
 #navbar-first #logo {
   width: 80px;
   height: 40px;
-  filter: invert(46%) sepia(86%) saturate(544%) hue-rotate(335deg)
-    brightness(93%) contrast(96%);
+  filter: brightness(0) saturate(100%) invert(46%) sepia(86%) saturate(544%)
+    hue-rotate(335deg) brightness(93%) contrast(96%);
   object-fit: contain;
 }
 
@@ -76,7 +76,7 @@ img {
 }
 
 .search-button {
-  background-color: #d7763e;
+  background-color: #d87944;
   width: 39px;
   height: 39px;
   display: grid;
@@ -320,6 +320,147 @@ img {
   font-size: 16px;
 }
 
+/* subscribe email section */
+#subscribe-email-section {
+  background-color: #ccebff;
+  padding: 36px 24px 18px;
+}
+
+#subscribe-email-section p {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+#email-input {
+  background-color: #fff;
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 100px;
+  display: flex;
+  padding: 0 6px;
+}
+
+#email-input input {
+  padding: 9px 12px;
+  flex: 1;
+  border-radius: 100px 0 0 100px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #0e0e0e66;
+}
+
+#email-input button {
+  background-color: #fff;
+  border-radius: 0 100px 100px 0;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 15px;
+  letter-spacing: 0.5px;
+}
+
+/* powered by */
+#powered-by {
+  background-color: #3b67d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+  gap: 12px;
+  color: #fff;
+}
+
+#powered-by img {
+  width: 36px;
+  filter: invert(100%);
+}
+
+#powered-by p {
+  cursor: help;
+  text-decoration: underline dashed;
+  text-underline-position: under;
+}
+
+/* etsy links */
+#etsy-links-section {
+  display: flex;
+}
+
+#download-link-container {
+  width: 35%;
+  background-color: #122868;
+  padding: 18px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo-container {
+  background-color: #d87944;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  padding: 6px;
+  display: grid;
+  place-items: center;
+}
+
+#logo-container img {
+  filter: invert(100%);
+  width: 60px;
+}
+
+#download-link-container button {
+  border: none;
+  background-color: #2638c0;
+  padding: 12px 18px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 100px;
+}
+
+#footer-navbar {
+  padding: 36px 36px 24px;
+  display: flex;
+  background-color: #2638c0;
+  color: #fff;
+}
+
+#footer-navbar {
+  padding: 36px 36px 24px;
+  display: flex;
+  gap: 18px;
+  background-color: #2638c0;
+  color: #fff;
+  flex: 1;
+}
+
+.column{
+  flex: 1;
+}
+
+#footer-navbar .column h4{
+  margin-bottom: 12px;
+}
+
+#footer-navbar .column a {
+  display: block;
+  width: fit-content;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+#footer-navbar .column a:hover{
+  text-decoration: underline;
+}
+
 @media (max-width: 1200px) {
   #shoppable-hero-item-02 .grid:nth-child(2) {
     display: none;
@@ -374,7 +515,7 @@ img {
     max-width: 25%;
   }
 
-  #about-section-content{
+  #about-section-content {
     flex-direction: column;
   }
 
@@ -413,7 +554,7 @@ img {
     max-width: 50%;
   }
 
-  #about-section{
+  #about-section {
     padding: 54px 30px 72px;
   }
 }
